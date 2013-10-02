@@ -17,20 +17,33 @@ public:
 	void variablesAttributsCalculation ();
 	
 	bool dodgeCalculation ( character &pc_cible) ;
+	double damageCalculation (character & pc_ciblei ;
+	
+	char getGender(void);
 
 
-	float getFlee(void);
+	double getFlee(void);
 	int getHit(void);
+	int getHp (void);
+	int getMp (void);
+	int getHps (void);
+	int getDef (void);//[<< DefVit + DefAr]
+	int getAtk (void);//[<< AtkStr + AtkWp]
+	int getMAtk (void); 
+	int getMDef (void);
+	equipement getEquipement(pi_position)
 
 
 private:
 	std::string ms_name;
 	std::string ms_firstname;
+	char mc_gender;  //M/F 
+	
 	
 	//base stat
 	int mi_str ;//[>> Atk++]
 	int mi_dex	;//[>> Hit++, Atk+, Hps+]
-	int mi_agi ;//[>> Flee++, Hps++]
+	int mi_agi ;//[>>  Flee++, Hps++]
 	int mi_intel ;//[>> Matk++, Mdef+, mi_mp++]
 	int mi_sag ;//[>> Mdef++, mi_mp+]
 	int mi_vit ;//[>> Def++, Hp++]
@@ -38,7 +51,7 @@ private:
 	//calculed stat : base stat + stuff stat //used in damages's calculation
 	int mi_hp;
 	int mi_mp;
-	float mf_flee;
+	double mf_flee;
 	int mi_hps;
 	int mi_hit;
 	int mi_def;//[<< DefVit + DefAr]
